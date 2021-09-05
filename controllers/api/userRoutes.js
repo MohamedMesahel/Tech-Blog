@@ -1,7 +1,7 @@
-// TODO: Build User routes (you can reuse mini project example)
+// TODO: Build User routes (you can re-use mini project example)
 const router = require('express').Router();
 const { User } = require('../../models');
-
+// Create Users
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// TODO: Build login UserData using async based on the mini project
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// TODO: Build Logout UserData using async based on the mini project
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
