@@ -2,7 +2,7 @@
 
 const router = require("express").Router();
 const { Post, Comment, User } = require("../../models");
-const withAuth = require("../../utils/auth");
+const withAuth = require("../../Main/utils/auth");
 
 router.post("/", withAuth, (req, res) => {
     const body = req.body;

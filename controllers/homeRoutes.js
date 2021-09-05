@@ -1,7 +1,7 @@
 // TODO: Build Home-apiRoutes
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
-const withAuth = require('../utils/auth');
+const withAuth = require('../Main/utils/auth');
 
 router.get('/', async (req, res) => {
   try {
