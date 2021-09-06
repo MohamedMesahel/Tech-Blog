@@ -8,22 +8,22 @@
     },
     {
     "comment": "This post was really helpful",
-    "userID": 1,
-    "postId": 1
+    "userID": 2,
+    "postId": 2
     },
     {
     "comment": "You need also to think about the applicatins for this app",
-    "userID": 1,
-    "postId": 1
+    "userID": 3,
+    "postId": 3
     },
     {
     "comment": "Thanks for sharing!!",
-    "userID": 1,
-    "postId": 1
+    "userID": 4,
+    "postId": 4
     },
     {
     "comment": "I read about somthing similiar",
-    "userID": 1,
-    "postId": 1
+    "userID": 5,
+    "postId": 5
     }
 ]
