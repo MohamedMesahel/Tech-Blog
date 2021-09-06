@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
                 'id',
                 'content',
                 'title',
-                'created_at',
+                'date_created',
             ],
             include: [
                 {
@@ -75,7 +75,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 
 module.exports = router;
