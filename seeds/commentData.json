@@ -1,29 +1,28 @@
 
-
 [
     {
-    "comment": "Great Job!!",
-    "userID": 1,
+    "id": 1,
+    "content": "Great Job!!",
+    "user_id": 1,
     "postId": 1
     },
     {
-    "comment": "This post was really helpful",
-    "userID": 2,
-    "postId": 2
+    "id": 2,
+    "content": "This post was really helpful",
+    "user_id": 2,
+    "postId": 1
     },
     {
-    "comment": "You need also to think about the applicatins for this app",
-    "userID": 3,
+    "id": 3,
+    "content": "You need also to think about the applicatins for this app",
+    "user_id": 3,
     "postId": 3
     },
     {
-    "comment": "Thanks for sharing!!",
-    "userID": 4,
+    "id": 4,
+    "content": "Thanks for sharing!!",
+    "user_id": 4,
     "postId": 4
-    },
-    {
-    "comment": "I read about somthing similiar",
-    "userID": 5,
-    "postId": 5
     }
+    
 ]

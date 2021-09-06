@@ -1,22 +1,26 @@
 [
   {
+    "id": 1,
     "title": "Music Near Me",
-    "text": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "userID": 1
+    "content": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+    "user_id": 1
   },
   {
+    "id": 2,
     "title": "The Ultimate Tech Quiz",
-    "text": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "userID": 2
+    "content": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+    "user_id": 2
   },
   {
+    "id": 3,
     "title": "Roll 'Em Up",
-    "text": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "userID": 3
+    "content": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+    "user_id": 3
   },
   {
+    "id": 4,
     "title": "Practical API Design at Netflix",
-    "post_url": "https://netflixtechblog.com/practical-api-design-at-netflix-part-1-using-protobuf-fieldmask-35cfdc606518",
-    "userID": 4
+    "content": "Protocol Buffers, or simply protobuf, is a data serialization mechanism. By default, gRPC uses protobuf as its IDL (interface definition language) and data serialization protocol.",
+    "user_id": 4
   }
 ]
