@@ -44,12 +44,12 @@ router.get('/:id', async (req, res) => {
             ]
         });
 
-        const post = postData.get({ plain: true });
+        // const post = postData.get({ plain: true });
 
-        res.render('onePost', {
-            post,
-            logged_in: req.session.logged_in
-        });
+        // res.render('onePost', {
+        //     post,
+        //     logged_in: req.session.logged_in
+        // });
 
     } catch (err) {
 
