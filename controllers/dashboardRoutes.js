@@ -1,15 +1,29 @@
 // TODO: Build the Dashboard route
 
 const router = require("express").Router();
-const { User, Post } = require("../models");
+const { User, Post, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 // TODO: Render Dashboard using async based on the mini project
 router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
+            where: {
+                user_id: req.params.user_id
+            },
+            attributes: [
+                'id',
+                'content',
+                'title',
+                'created_at',
+            ],
             include: [
-                { model: User }
+                {
+                    model: Post,
+                },
+                {
+                    model: Comment,
+                }
             ],
             where: {
                 userId: req.session.user_id
@@ -27,26 +41,7 @@ router.get('/', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-// TODO: Render Dashboard using async without Async method for future references
-// router.get("/", withAuth, (req, res) => {
-//     Post.findAll({
-//         where: {
-//             userId: req.session.userId
-//         }
-//     })
-//         .then(dbPostData => {
-//             const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-//             res.render("all-posts-admin", {
-//                 layout: "dashboard",
-//                 posts
-//             });
-//         })
-//         .catch(err => {
-//             console.log(err);
-//             res.redirect("login");
-//         });
-// });
 // TODO: Add new post
 router.get('/new', withAuth, async (req, res) => {
     try {
@@ -61,12 +56,6 @@ router.get('/new', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-// TODO: Add new post without Async method for future references
-// router.get("/new", withAuth, (req, res) => {
-//     res.render("new-post", {
-//         layout: "dashboard"
-//     });
-// });
 
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
@@ -87,6 +76,35 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     }
 });
 
+
+
+module.exports = router;
+// TODO: Render Dashboard without Async method for future references
+// router.get("/", withAuth, (req, res) => {
+//     Post.findAll({
+//         where: {
+//             userId: req.session.userId
+//         }
+//     })
+//         .then(dbPostData => {
+//             const posts = dbPostData.map((post) => post.get({ plain: true }));
+
+//             res.render("all-posts-admin", {
+//                 layout: "dashboard",
+//                 posts
+//             });
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.redirect("login");
+//         });
+// });
+// TODO: Add new post without Async method for future references
+// router.get("/new", withAuth, (req, res) => {
+//     res.render("new-post", {
+//         layout: "dashboard"
+//     });
+// });
 // TODO: Edit new post without Async method for future references
 // router.get("/edit/:id", withAuth, (req, res) => {
 //     Post.findByPk(req.params.id)
@@ -106,5 +124,3 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 //             res.status(500).json(err);
 //         });
 // });
-
-module.exports = router;
