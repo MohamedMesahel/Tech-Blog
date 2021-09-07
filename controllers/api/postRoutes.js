@@ -9,11 +9,20 @@ router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll({
             include: [
-                {model: User,
-                attributes: ['username']},
-                {model: Comment,
-                    attributes: ['username']}
-            ],
+                {
+                    model: User,
+                    attributes: ['username']
+                },
+                {
+                    model: Comment,
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['username']
+                        }
+                    ]
+                }
+            ]
 
         });
         res.json(postData);
@@ -43,6 +52,7 @@ router.get('/:id', async (req, res) => {
                 }
             ]
         });
+        res.json(postData);
 
         // const post = postData.get({ plain: true });
 
@@ -57,7 +67,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 // Create Posts using Async method
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
     try {
         const postData = await Post.create({
             ...req.body,
