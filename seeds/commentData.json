@@ -1,28 +1,22 @@
-
 [
     {
-    "id": 1,
-    "content": "Great Job!!",
-    "user_id": 1,
-    "postId": 1
+        "user_id": 1,
+        "content": "Great Job!!",
+        "postId": 1
     },
     {
-    "id": 2,
-    "content": "This post was really helpful",
-    "user_id": 2,
-    "postId": 1
+        "user_id": 2,
+        "content": "This post was really helpful",
+        "postId": 1
     },
     {
-    "id": 3,
-    "content": "You need also to think about the applicatins for this app",
-    "user_id": 3,
-    "postId": 3
+        "user_id": 3,
+        "content": "You need also to think about the applicatins for this app",
+        "postId": 3
     },
     {
-    "id": 4,
-    "content": "Thanks for sharing!!",
-    "user_id": 4,
-    "postId": 4
+        "user_id": 4,
+        "content": "Thanks for sharing!!",
+        "postId": 4
     }
-    
 ]
