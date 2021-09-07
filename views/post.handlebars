@@ -1,14 +1,12 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+
+<div class="row medium-8 large-7 columns">
+  <div class="blog-post">
+    <h3>{{post.title}}  <small>{{format_date date_created}}</small></h3>
+    <p> {{post.content}} </p>
+    <div class="callout">
+      <ul class="menu simple">
+        <li><a href="#">Author: {{user.name}}</a></li>
+        <li>comments<a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></li>
+      </ul>
+    </div>
+  </div>

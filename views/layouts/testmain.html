@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+</head>
+
+<body>
+
+    <!-- Start Top Bar -->
+    <header>
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            {{#if loggedIn}}
+            <li class="menu-text">Tech-Blog</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="#">Logout</a></li>
+            {{else}}
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Login</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</div>
+<!-- End Top Bar -->
+    </header>
+    
+
+    <div class="callout large primary">
+        <div class="row column text-center">
+            <h1>Tech Blog</h1>
+            <h2 class="subheader">Such a Simple Blog Layout</h2>
+        </div>
+    </div>
+
+    <!-- We can now combine rows and columns when there's only one column in that row -->
+    <div class="row medium-8 large-7 columns">
+        <div class="blog-post">
+            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+            <img class="thumbnail" src="https://placehold.it/850x350">
+            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
+                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
+                Nulla at nulla justo, eget luctus.</p>
+            <div class="callout">
+                <ul class="menu simple">
+                    <li><a href="#">Author: Mike Mikers</a></li>
+                    <li><a href="#">Comments: 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+            <img class="thumbnail" src="https://placehold.it/850x350">
+            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
+                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
+                Nulla at nulla justo, eget luctus.</p>
+            <div class="callout">
+                <ul class="menu simple">
+                    <li><a href="#">Author: Mike Mikers</a></li>
+                    <li><a href="#">Comments: 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+            <img class="thumbnail" src="https://placehold.it/850x350">
+            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
+                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
+                Nulla at nulla justo, eget luctus.</p>
+            <div class="callout">
+                <ul class="menu simple">
+                    <li><a href="#">Author: Mike Mikers</a></li>
+                    <li><a href="#">Comments: 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h3>Awesome blog post title <small>3/6/2015</small></h3>
+            <img class="thumbnail" src="https://placehold.it/850x350">
+            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
+                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
+                Nulla at nulla justo, eget luctus.</p>
+            <div class="callout">
+                <ul class="menu simple">
+                    <li><a href="#">Author: Mike Mikers</a></li>
+                    <li><a href="#">Comments: 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund My Project!</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="flex-column justify-space-around">
+        <header class="display-flex justify-space-between align-center p-2">
+            <h1>
+                <span role="img" aria-label="money">💸</span>
+                <a href="/">Fund My Project!</a>
+            </h1>
+            <nav>
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <a href="/profile">profile</a> |
+                <button class="no-button" id="logout">logout</button>
+                {{else}}
+                <a href="/login">login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
