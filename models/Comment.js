@@ -9,9 +9,24 @@ Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
+        postId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'post',
+                key: 'id',
+            },
         },
         content: {
             type: DataTypes.TEXT,
@@ -23,21 +38,8 @@ Comment.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
-        },
-        postId: { 
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'post',
-                key: 'id',
-            },
-        },
+        
+        
     },
     {
         sequelize,
