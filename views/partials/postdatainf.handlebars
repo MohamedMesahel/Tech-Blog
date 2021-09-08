@@ -5,7 +5,8 @@
         <div class="callout">
             <ul class="menu simple">
                 <li><a href="#">Author: {{user.name}}</a></li>
-                <li>comments<a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                {{!-- <li>comments<a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> --}}
+                <li>comments<a href="/post/{{id}}">{{comments.length}} {{  comments.length}}</a>
                 </li>
             </ul>
         </div>
