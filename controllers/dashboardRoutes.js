@@ -8,15 +8,6 @@ const withAuth = require("../utils/auth");
 router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
-            where: {
-                user_id: req.params.user_id
-            },
-            attributes: [
-                'id',
-                'content',
-                'title',
-                'date_created',
-            ],
             include: [
                 {
                     model: User,
@@ -26,12 +17,19 @@ router.get('/', withAuth, async (req, res) => {
                 }
             ],
             where: {
-                userId: req.session.user_id
-            }
+                user_id: req.session.user_id
+            },
+            attributes: [
+                'id',
+                'title',
+                'content',
+                'date_created',
+            ],
+            
         });
 
         const posts = postData.map(post => post.get({ plain: true }));
-        res.render('dashboard', { posts, loggedIn: true });
+        res.render('dashboard', { posts, logged_in: true });
 
 
     } catch (err) {
@@ -40,10 +38,10 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // TODO: Add new post
-router.get('/new', withAuth, async (req, res) => {
+router.get('/createpost', withAuth, async (req, res) => {
     try {
 
-        res.render('new-post', {
+        res.render('create-new', {
             logged_in: req.session.logged_in,
             layout: "dashboard"
 
@@ -61,7 +59,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
         const post = postData.get({ plain: true });
 
-        res.render('edit-post', {
+        res.render('editpost', {
             post,
             logged_in: req.session.logged_in,
             layout: "dashboard",

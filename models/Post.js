@@ -21,6 +21,7 @@ Post.init(
       allowNull: false,
 
     },
+    // remove the underscore for better object naming for future referances
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,

@@ -1,18 +1,23 @@
-<section class="pageTitle">
-  <h1>The Tech Blog</h1>
-</section>
-
-<div class="postCard">
-  <div class="postTitle">
-    <h2>{{ post.title }}</h2>
-    <h4>Posted by {{ post.user.name }} on {{ formatDate post.date_created }}</h3>
+<div class="callout large primary">
+  <div class="row column text-center">
+    <h1>Tech Blog</h1>
   </div>
-  <p>{{ post.content }}</p>
 </div>
-
-{{#each post.comments as |comment| }}
-{{> comment }}
-{{/each}}
+<div class="row" id="content">
+<div class="medium-8 columns">
+  <div class="blog-post">
+    <h3>{{ post.title }} <small>{{ formatDate post.date_created }}</small></h3>
+    <p>{{ post.content }}</p>
+    <div class="callout">
+      <ul class="menu simple">
+        <li>Author: {{ post.user.name }} </li>
+        <li>{{#each post.comments as |comment| }}
+        {{> comment }}
+        {{/each}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 {{#if logged_in}}
 <div class="commentCard">
@@ -33,3 +38,15 @@
 
 <script src="../public/js/comment.js"></script>
 {{/if}}
+{{!-- <div class="postCard">
+  <div class="postTitle">
+    <h2>{{ post.title }}</h2>
+    <h4>Posted by {{ post.user.name }} on {{ formatDate post.date_created }}</h3>
+  </div>
+  <p>{{ post.content }}</p>
+</div>
+
+{{#each post.comments as |comment| }}
+{{> comment }}
+{{/each}}
+

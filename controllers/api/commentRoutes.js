@@ -1,8 +1,27 @@
 // TODO: Build comments API
 const router = require('express').Router();
-const { Comment } = require('../../models');
+const { Comment, User, Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/', async (req, res) => {
+
+  try {
+    const commentData = await Comment.findAll({
+      include: [
+        {
+          model: User,
+        },
+        {
+          model: Post,
+        }
+      ]
+
+    });
+    res.json(commentData);
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
 router.post('/comment', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({

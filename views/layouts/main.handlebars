@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foundation | Welcome</title>
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  {{!--
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> --}}
+  {{!--
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --}}
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
-
   <!-- Start Top Bar -->
   <header>
     <div class="top-bar">
@@ -26,26 +27,23 @@
           {{else}}
           <li><a href="/">Home</a></li>
           <li><a href="/login">Login</a></li>
+          <li><a href="/login">Dashboard</a></li>
           {{/if}}
         </ul>
       </div>
     </div>
     <!-- End Top Bar -->
   </header>
-
   <div class="callout large primary">
     <div class="row column text-center">
       <h1>Tech Blog</h1>
       <h2 class="subheader">Such a Simple Blog Layout</h2>
     </div>
   </div>
-
   <!-- We can now combine rows and columns when there's only one column in that row -->
-  <div class="row medium-8 large-7 columns">
-
+  <main class="flex-container align-center">
     {{{ body }}}
-
-  </div>
+  </main>
   {{#if logged_in}}
   <script src="../../public/js/login.js"></script>
   {{/if}}

@@ -18,12 +18,12 @@ router.get('/', async (req, res) => {
           attributes: ['id', 'content', 'date_created', 'user_id', 'postId'],
           include: {
             model: User,
-            attributes: ['name']
+            attributes: ['username']
           }
         },
         {
           model: User,
-          attributes: ['name']
+          attributes: ['username']
         }
       ],
       order: [
@@ -34,7 +34,6 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
-
     // Pass serialized data and session flag into template?
     res.render('homepage', { 
       posts,
@@ -47,7 +46,7 @@ router.get('/', async (req, res) => {
 // Login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
   res.render('login');
