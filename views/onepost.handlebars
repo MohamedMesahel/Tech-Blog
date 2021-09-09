@@ -1,40 +1,4 @@
-<div class="callout large primary">
-  <div class="row column text-center">
-    <h1>Tech Blog</h1>
-  </div>
-</div>
-<div class="row" id="content">
-<div class="medium-8 columns">
-  <div class="blog-post">
-    <h3>{{ post.title }} <small>{{ formatDate post.date_created }}</small></h3>
-    <p>{{ post.content }}</p>
-    <div class="callout">
-      <ul class="menu simple">
-        <li>Author: {{ post.user.name }} </li>
-        <li>{{#each post.comments as |comment| }}
-        {{> comment }}
-        {{/each}}</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-{{#if logged_in}}
-<div class="commentCard">
-  <div class="commentTitle">
-    <h2> </h2>
-  </div>
-  <form class="comment-form">
-    <div class="form-group">
-      <label for="comment-post">Comment</label><br>
-      <input class="form-input" type="text" id="comment-post">
-    </div>
-    <input type="hidden" id="postId" name="postId" value="{{ post.id }}">
-    <div class="form-group">
-      <button class="commentBtn" type="submit">Submit</button>
-    </div>
-  </form>
-</div>
 
 <script src="../public/js/comment.js"></script>
 {{/if}}
