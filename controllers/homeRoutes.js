@@ -6,12 +6,6 @@ router.get('/', async (req, res) => {
   try {
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
-      attributes: [
-        'id',
-        'title',
-        'content',
-        'date_created',
-      ],
       include: [
         {
           model: Comment,
@@ -25,6 +19,12 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username']
         }
+      ],
+      attributes: [
+        'id',
+        'title',
+        'content',
+        'date_created',
       ],
       order: [
         ['date_created', 'DESC']
@@ -46,13 +46,22 @@ router.get('/', async (req, res) => {
 // Login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/dashboard');
+    res.redirect('/');
     return;
   }
   res.render('login');
 });
+// TODO: build Signup routes
+router.get('/signup', async (req, res) =>{
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
+});
 
 module.exports = router;
+
 // Find one post using by primaryKey
 // router.get('/post/:id', async (req, res) => {
 //   try {
