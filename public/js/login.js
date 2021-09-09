@@ -49,5 +49,5 @@ document
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.login-box-form-section')
+  .querySelector('.signup-box-form-section')
   .addEventListener('submit', signupFormHandler);
