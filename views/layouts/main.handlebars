@@ -1,4 +1,46 @@
-<!doctype html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h3>
+        <a href="/">Home</a>
+      </h3>
+      <h3>
+        <a href="/dashboard">Dashboard</a>
+      </h3>
+      {{#if logged_in}}
+      <h3>
+        <button class="no-button" id="logout">Logout</button>
+      </h3>
+      {{else}}
+      <h3>
+        <a href="/login">Login</a>
+      </h3>
+      {{/if}}
+    </nav>
+  </header>
+  <main>
+    {{{ body }}}
+  </main>
+</body>
+{{#if logged_in}}
+<script src="../../public/js/login.js"></script>
+{{/if}}
+
+</html>
+
+{{!-- <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -50,8 +92,7 @@
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
   <script>
-    $(document).foundation();
   </script>
 </body>
 
-</html>
+</html> --}}
