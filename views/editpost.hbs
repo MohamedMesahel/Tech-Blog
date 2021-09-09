@@ -1,4 +1,36 @@
-<div class="container">
+
+<section class="pageTitle">
+    <h1>Your Dashboard</h1>
+</section>
+
+<div class="postCard">
+    <div class="postTitle">
+        <h2>Edit Post</h2>
+    </div>
+    <form class="edit-post-form">
+        <div class="form-group">
+            <label for="title">Title</label><br>
+            <input class="form-input" type="text" id="title" value="{{ post.title }}">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label><br>
+            <textarea name="content" id="content">{{ post.content }}</textarea>
+        </div>
+        <input type="hidden" id="postID" name="postID" value="{{ post.id }}">
+        <div class="form-group">
+            <button class="createPostBtn" type="submit">Submit Edits</button>
+        </div>
+    </form>
+    <div class="form-group">
+        <button id="delete-post-btn" class="delete-post-btn" type="submit" value="{{ post.id }}">Delete</button>
+    </div>
+</div>
+
+
+<script src="../public/js/editPost.js"></script>
+<script src="../public/js/deletePost.js"></script>
+<script src="../public/js/comment.js"></script>
+{{!-- <div class="container">
     <div class="row">
 
         <div class="col-md-8 col-md-offset-2">
@@ -40,7 +72,4 @@
         </div>
 
     </div>
-</div>
-<script src="../public/js/editPost.js"></script>
-<script src="../public/js/deletePost.js"></script>
-<script src="../public/js/comment.js"></script>
+</div> --}}
