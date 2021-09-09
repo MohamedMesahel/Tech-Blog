@@ -1,5 +1,31 @@
 
-  <div>
+  <section class="pageTitle">
+    <h1>Tech-Blog</h1>
+  </section>
+  <div class="postCard">
+    <div class="postTitle">
+      <h2>Login</h2>
+    </div>
+    <form class="sign-in-form">
+      <div class="form-group">
+        <label for="sign-in-form-username">Username</label><br>
+        <input class="form-input" type="text" id="sign-in-form-username">
+      </div>
+      <div class="form-group">
+        <label for="sign-in-form-password">Password</label><br>
+        <input class="form-input" type="password" id="sign-in-form-password">
+      </div>
+      <div class="form-group">
+        <button class="loginBtn" type="submit">Login!</button>
+      </div>
+    </form>
+    <h3>
+      <a href="/signup" class="switchLoginSignup">Or Sign Up</a>
+    </h3>
+  </div>
+  <script src="../public/js/login.js"></script>
+  
+  {{!-- <div>
     Welcome
   </div>
   <div class="login-box">
@@ -26,6 +52,5 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-<script src="../public/js/login.js"></script>
