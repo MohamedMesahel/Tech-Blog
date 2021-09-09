@@ -54,16 +54,33 @@ router.get('/:id', async (req, res) => {
         });
         res.json(postData);
 
-        // const post = postData.get({ plain: true });
+        const post = postData.get({ plain: true });
 
-        // res.render('onePost', {
-        //     post,
-        //     logged_in: req.session.logged_in
-        // });
+        res.render('onepost', {
+            post,
+            logged_in: req.session.logged_in
+        });
 
     } catch (err) {
 
         res.status(500).json(err);
+    }
+});
+// Merging comment routes in post routes for better connection
+router.post('/comment', withAuth, async (req, res) => {
+    try {
+        const commentData = await Comment.create({
+            ...req.body,
+            user_id: req.session.user_id,
+            content: req.body.content,
+            postId: req.body.postId,
+
+
+        });
+
+        res.status(200).json(commentData);
+    } catch (err) {
+        res.status(400).json(err);
     }
 });
 // Create Posts using Async method
