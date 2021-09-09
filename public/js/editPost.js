@@ -1,4 +1,4 @@
-editFormHandler = async (event) => {
+const editFormHandler = async (event) => {
     event.preventDefault();
 
     const id = document.querySelector('#postID').value.trim();
@@ -21,7 +21,7 @@ editFormHandler = async (event) => {
     } else {
         alert(response.statusText);
     }
-}
+};
 
 document
 .querySelector('.edit-post-form')
