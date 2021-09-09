@@ -154,3 +154,81 @@
 </body>
 
 </html>
+{{!--
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    {{!--
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    --}}
+    {{!--
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --}}
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Start Top Bar -->
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    {{#if loggedIn}}
+                    <li class="menu-text">Tech-Blog</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/" id="logout">Logout</a></li>
+                    {{else}}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/login">Dashboard</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+        <!-- End Top Bar -->
+    </header>
+    <div class="callout large primary">
+        <div class="row column text-center">
+            <h1>Tech Blog</h1>
+            <h2 class="subheader">Such a Simple Blog Layout</h2>
+        </div>
+    </div>
+    <!-- We can now combine rows and columns when there's only one column in that row -->
+    <main class="flex-container align-center">
+        {{{ body }}}
+    </main>
+    {{#if logged_in}}
+    <script src="../../public/js/login.js"></script>
+    {{/if}}
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+    </script>
+</body>
+
+</html> --}}
+{{!-- Try to use foundations liberary in the future for better view --}}
+{{!-- <div class="row medium-8 large-7 columns">
+    <div class="blog-post">
+        <a href="/post/{{id}}">
+            <h3>{{post.title}} <small>{{format_date date_created}}</small></h3>
+            <p> {{post.content}} </p>
+            <div class="callout">
+                <ul class="menu simple">
+                    <li>Author: {{user.name}} </li>
+                    {{!-- <li>comments<a href="/post/{{id}}">{{comments.length}} {{format_plural "comment"
+                            comments.length}}</a>
+                        --}}
+                        {{!--
+                    <li><a href="/posts/{{id}}">{{comments.length}} {{ comments.length}}</a>
+                    </li>
+                </ul>
+            </div>
+        </a>
+
+    </div> --}}
