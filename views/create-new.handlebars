@@ -1,4 +1,31 @@
-<div class="container">
+
+<section class="pageTitle">
+    <h1>Welcome to your Dashboard</h1>
+</section>
+
+<div class="postCard">
+    <div class="postTitle">
+        <h2>Create New Post</h2>
+    </div>
+    <form class="post-form">
+        <div class="form-group">
+            <label for="title">Title</label><br>
+            <input class="form-input" type="text" id="title">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label><br>
+            <textarea name="content" id="content"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="createPostBtn" type="submit">Create</button>
+        </div>
+    </form>
+</div>
+
+
+
+<script src="../public/js/createPost.js"></script>
+{{!-- <div class="container">
     <div class="row">
 
         <div class="col-md-8 col-md-offset-2">
@@ -41,5 +68,4 @@
         </div>
 
     </div>
-</div>
-<script src="../public/js/createPost.js"></script>
+</div> --}}
