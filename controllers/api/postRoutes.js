@@ -54,12 +54,12 @@ router.get('/:id', async (req, res) => {
         });
         res.json(postData);
 
-        const post = postData.get({ plain: true });
+        // const post = postData.get({ plain: true });
 
-        res.render('onePost', {
-            post,
-            logged_in: req.session.logged_in
-        });
+        // res.render('onePost', {
+        //     post,
+        //     logged_in: req.session.logged_in
+        // });
 
     } catch (err) {
 
@@ -78,7 +78,7 @@ router.post("/", withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
-
+// TODO: Update posts after editing them
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.update({
