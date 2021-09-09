@@ -1,4 +1,13 @@
 
+<section class="pageTitle">
+  <h1>Welcome to your Dashboard</h1>
+</section>
+{{#each posts as |post| }}
+{{> postdashboardview }}
+{{/each}}
+<a id="createBtn" href="/dashboard/createpost">Create new post</a>
+
+
     {{!-- <div class="mb-5 pt-3">
       <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create
           post</button></a>
