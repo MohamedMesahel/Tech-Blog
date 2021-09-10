@@ -29,47 +29,4 @@
 
 <script src="../public/js/editPost.js"></script>
 <script src="../public/js/deletePost.js"></script>
-<script src="../public/js/comment.js"></script>
-{{!-- <div class="container">
-    <div class="row">
 
-        <div class="col-md-8 col-md-offset-2">
-
-            <h1>Edit Post</h1>
-
-            <form class="post-form" method="POST">
-
-                <div class="form-group has-error">
-                    <label for="slug">Slug <span class="require">*</span> <small>(This field use in url
-                            path.)</small></label>
-                    <input type="text" class="form-control" name="slug" />
-                    <span class="help-block">Field not entered!</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="title">Title <span class="require">*</span></label>
-                    <input id="title" type="text" class="form-control" name="title" value="{{post.title}}"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="content" rows="5" class="form-control" name="description" value="{{post.content}}"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <p><span class="require">*</span> - required fields</p>
-                </div>
-
-                <div class="is-pulled-right">
-                    created by you on {{format_date post.date_created}}
-                    |
-                    <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-                </div>
-                <button type="submit" class="button is-success">save post</button>
-                <button type="button" class="button is-danger delete-post-btn">delete post</button>
-
-            </form>
-        </div>
-
-    </div>
-</div> --}}

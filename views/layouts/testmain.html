@@ -231,4 +231,143 @@
             </div>
         </a>
 
-    </div> --}}
+    </div>
+    {{!-- <div class="container">
+        <div class="row">
+    
+            <div class="col-md-8 col-md-offset-2">
+    
+                <h1>Create post</h1>
+    
+                <form class="post-form" method="POST">
+    
+                    <div class="form-group has-error">
+                        <label for="slug">Slug <span class="require">*</span> <small>(This field use in url
+                                path.)</small></label>
+                        <input type="text" class="form-control" name="slug" />
+                        <span class="help-block">Field not entered!</span>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="title">Title <span class="require">*</span></label>
+                        <input id="title" type="text" class="form-control" name="title" />
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="content" rows="5" class="form-control" name="description"></textarea>
+                    </div>
+    
+                    <div class="form-group">
+                        <p><span class="require">*</span> - required fields</p>
+                    </div>
+    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">
+                            Create
+                        </button>
+                        {{!-- <button class="btn btn-default">
+                            Cancel
+                        </button> --}}
+                    </div>
+    
+                </form>
+            </div>
+    
+        </div>
+    </div>
+
+{{!-- <div class="mb-5 pt-3">
+    <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create
+            post</button></a>
+
+    <h2 class="title pb-4">Dashboard: Showing all posts</h2>
+    <hr>
+    {{#if posts.length}}
+</div>
+
+{{#each posts as |post|}}
+{{> post-info post}}
+
+<a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
+</div>
+{{/each}}
+
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">There are no current posts</h6>
+
+{{/if}} --}}
+{{!-- <div class="container">
+    <div class="row">
+
+        <div class="col-md-8 col-md-offset-2">
+
+            <h1>Edit Post</h1>
+
+            <form class="post-form" method="POST">
+
+                <div class="form-group has-error">
+                    <label for="slug">Slug <span class="require">*</span> <small>(This field use in url
+                            path.)</small></label>
+                    <input type="text" class="form-control" name="slug" />
+                    <span class="help-block">Field not entered!</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Title <span class="require">*</span></label>
+                    <input id="title" type="text" class="form-control" name="title" value="{{post.title}}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="content" rows="5" class="form-control" name="description"
+                        value="{{post.content}}"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <p><span class="require">*</span> - required fields</p>
+                </div>
+
+                <div class="is-pulled-right">
+                    created by you on {{format_date post.date_created}}
+                    |
+                    <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
+                        post.comments.length}}</a>
+                </div>
+                <button type="submit" class="button is-success">save post</button>
+                <button type="button" class="button is-danger delete-post-btn">delete post</button>
+
+            </form>
+        </div>
+
+    </div>
+</div> --}}
+{{!-- <div>
+    Welcome
+</div>
+<div class="login-box">
+    <div class="row collapse expanded">
+        <div class="small-12 medium-6 column small-order-2 medium-order-1">
+            <div class="login-box-form-section">
+                <h1 class="login-box-title">Sign up</h1>
+                <input id="name-signup" class="login-box-input" type="text" name="username" placeholder="Username" />
+                <input id="email-signup" class="login-box-input" type="email" name="email" placeholder="E-mail" />
+                <input id="password-signup" class="login-box-input" type="password" name="password"
+                    placeholder="Password" />
+                <input class="login-box-submit-button" type="submit" name="signup_submit" value="Sign me up" />
+            </div>
+        </div>
+        <div class="small-12 medium-6 column small-order-1 medium-order-2 login-box-social-section">
+            <form>
+                <div class="sign-in-form">
+                    <h4 class="text-center">Sign In</h4>
+                    <label for="sign-in-form-username">Username</label>
+                    <input type="text" class="sign-in-form-username" id="sign-in-form-username">
+                    <label for="sign-in-form-password">Password</label>
+                    <input type="text" class="sign-in-form-password" id="sign-in-form-password">
+                    <button type="submit" class="sign-in-form-button">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> --}}
