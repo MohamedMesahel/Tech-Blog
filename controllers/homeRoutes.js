@@ -1,31 +1,31 @@
 // TODO: Build Home-apiRoutes
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
+const { Post, User } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
       include: [
-        {
-          model: Comment,
-          attributes: ['id', 'content', 'date_created', 'user_id', 'postId'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        },
+        // {
+        //   model: Comment,
+        //   attributes: ['id', 'content', 'date_created', 'user_id', 'postId'],
+        //   include: {
+        //     model: User,
+        //     attributes: ['username']
+        //   }
+        // },
         {
           model: User,
           attributes: ['username']
         }
       ],
-      attributes: [
-        'id',
-        'title',
-        'content',
-        'date_created',
-      ],
+      // attributes: [
+      //   'id',
+      //   'title',
+      //   'content',
+      //   'date_created',
+      // ],
       order: [
         ['date_created', 'DESC']
       ]
@@ -44,7 +44,7 @@ router.get('/', async (req, res) => {
   }
 });
 // Login
-router.get('/login', (req, res) => {
+router.get('/login', async (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
     return;
