@@ -1,7 +1,7 @@
 // TODO: Build the Dashboard route
 
 const router = require("express").Router();
-const { User, Post, Comment } = require("../models");
+const { User, Post } = require("../models");
 const withAuth = require("../utils/auth");
 
 // TODO: Render Dashboard using async based on the mini project
@@ -12,19 +12,10 @@ router.get('/', withAuth, async (req, res) => {
                 {
                     model: User,
                 },
-                {
-                    model: Comment,
-                }
             ],
             where: {
                 user_id: req.session.user_id
             },
-            attributes: [
-                'id',
-                'title',
-                'content',
-                'date_created',
-            ],
             
         });
 
@@ -43,7 +34,7 @@ router.get('/createpost', withAuth, async (req, res) => {
 
         res.render('create-new', {
             logged_in: req.session.logged_in,
-            layout: "dashboard"
+            // layout: "dashboard"
 
         });
 
@@ -62,7 +53,7 @@ router.get('/:id', withAuth, async (req, res) => {
         res.render('editpost', {
             post,
             logged_in: req.session.logged_in,
-            layout: "dashboard",
+            // layout: "dashboard",
 
         });
 
