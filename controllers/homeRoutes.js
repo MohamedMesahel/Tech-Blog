@@ -57,7 +57,7 @@ router.get('/signup', async (req, res) =>{
     res.redirect('/');
     return;
   }
-  res.render('signup');
+  res.render('login');
 });
 
 module.exports = router;
