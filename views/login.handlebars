@@ -1,28 +1,45 @@
 
-  <section class="pageTitle">
-    <h1>Tech-Blog</h1>
-  </section>
-  <div class="postCard">
-    <div class="postTitle">
+  <div class="row">
+    <div class="col-md-6">
       <h2>Login</h2>
+  
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="email-login">email:</label>
+          <input class="form-input" type="text" id="username-login" />
+        </div>
+        <div class="form-group">
+          <label for="password-login">password:</label>
+          <input class="form-input" type="password" id="password-login" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">login</button>
+        </div>
+      </form>
     </div>
-    <form class="sign-in-form">
-      <div class="form-group">
-        <label for="sign-in-form-username">Username</label><br>
-        <input class="form-input" type="text" id="sign-in-form-username">
-      </div>
-      <div class="form-group">
-        <label for="sign-in-form-password">Password</label><br>
-        <input class="form-input" type="password" id="sign-in-form-password">
-      </div>
-      <div class="form-group">
-        <button class="loginBtn" type="submit">Login!</button>
-      </div>
-    </form>
-    <h3>
-      <a href="/signup" class="switchLoginSignup">Or Sign Up</a>
-    </h3>
+    <div class="col-md-6">
+      <h2>Signup</h2>
+  
+      <form class="form signup-form">
+        <div class="form-group">
+          <label for="name-signup">name:</label>
+          <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div class="form-group">
+          <label for="email-signup">email:</label>
+          <input class="form-input" type="text" id="email-signup" />
+        </div>
+        <div class="form-group">
+          <label for="password-signup">password:</label>
+          <input class="form-input" type="password" id="password-signup" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">signup</button>
+        </div>
+      </form>
+    </div>
   </div>
+  
   <script src="../public/js/login.js"></script>
   
   

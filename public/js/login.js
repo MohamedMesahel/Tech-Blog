@@ -2,8 +2,8 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const username = document.querySelector('#sign-in-form-username').value.trim();
-  const password = document.querySelector('#sign-in-form-password').value.trim();
+  const username = document.querySelector('#username-login').value.trim();
+  const password = document.querySelector('#password-login').value.trim();
 
   if (username && password) {
     // Send a POST request to the API endpoint
@@ -45,9 +45,9 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.sign-in-form')
+  .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-box-form-section')
+  .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
