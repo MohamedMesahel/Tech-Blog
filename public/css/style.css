@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --primary: #ccdad1;
   --secondary: #dce9d5;
@@ -7,10 +11,27 @@
   --border-radius: .3rem;
 }
 
-* {
-  box-sizing: border-box;
+
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
 }
 
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+/* 
 body {
   background-color: var(--primary);
   margin: 0;
@@ -270,7 +291,7 @@ footer {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
   }
-}
+} */
 
 /* @media screen and (max-width: 39.9375em) {
   .login-box  {

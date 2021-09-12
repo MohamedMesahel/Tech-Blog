@@ -10,35 +10,33 @@
   <link  href="../../public/css/style.css">
 
 </head>
-
 <body>
-  <div class="wrapper">
-    <header class= "hero">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a href="/">Home</a>
+      </h1>
       <nav>
-        <h3>
-          <a href="/">Home</a>
-        </h3>
-        <h3>
-          <a href="/dashboard">Dashboard</a>
-        </h3>
+        <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <h3>
-          <button class="no-button" id="logout">Logout</button>
-        </h3>
+        <a href="/dashboard">profile</a> |
+        <button class="no-button" id="logout">logout</button>
         {{else}}
-        <h3>
-          <a href="/login">Login</a>
-        </h3>
+        <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
-    <main>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-</div>
-{{#if logged_in}}
-<script src="../../public/js/logout.js"></script>
-{{/if}}
+    <footer>
+
+    </footer>
+  </div>
+  {{#if logged_in}}
+  <script src="../../public/js/logout.js"></script>
+  {{/if}}
 </body>
 
 
