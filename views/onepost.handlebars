@@ -6,7 +6,7 @@
 <div class="postCard">
   <div class="postTitle">
     <h2>{{ post.title }}</h2>
-    <h4>Posted by {{ post.user.username }} on {{ format_date date_created }}</h3>
+    <h4>Posted by {{ post.user.username }} on {{ format_date post.date_created }}</h3>
   </div>
   <p>{{ post.content }}</p>
 </div>
@@ -31,6 +31,6 @@
     </div>
   </form>
 </div>
-<script src="../public/js/comment.js"></script>
+<script src="/js/comment.js"></script>
 {{/if}}
 

@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
                 }
             ]
         });
-        res.json(postData);
+        // res.json(postData);
 
         const post = postData.get({ plain: true });
 
