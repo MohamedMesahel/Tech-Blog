@@ -11,9 +11,17 @@
   --border-radius: .3rem;
 }
 
+html {
+  background-color: var(--lightColor);
+}
 
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+header {
+  background-color: var(--darkColor);
+}
+
+.pageTitle {
+  background-color: var(--darkColor);
+  padding: 15px 0 35px 0;
 }
 
 .no-button {
@@ -31,17 +39,6 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-/* 
-body {
-  background-color: var(--primary);
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark);
-  line-height: 1.5;
-  font-size: 24px;
-}
-
 h1, h2, h3, h5, h6 {
   font-weight: 700;
   margin: 0;
@@ -50,9 +47,9 @@ h1, h2, h3, h5, h6 {
 }
 
 nav {
-  padding: 10px;
-  line-height: 1.25;
-  float: top;
+  width: 100%;
+  position: fixed;
+  background-color: var(--dark);
 }
 
 .link-color {
@@ -165,15 +162,15 @@ a, .no-button {
 }
 
 .postCard, .commentCard {
-  margin: 24px 50px;
-  border: solid 4px var(--dark);
-  border-radius: 4px;
+  margin: 0 0 20px 0;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
 }
 
 .postTitle, .commentTitle {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--dark);
 }
 
@@ -291,7 +288,20 @@ footer {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
   }
-} */
+}
+
+/* 
+body {
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 24px;
+}
+
+
 
 /* @media screen and (max-width: 39.9375em) {
   .login-box  {

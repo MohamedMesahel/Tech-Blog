@@ -4,25 +4,27 @@ const editFormHandler = async (event) => {
     const id = document.querySelector('#postID').value.trim();
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
+    if (title && content) {
+        const response = await fetch(`/api/posts/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({
+                title,
+                content
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
 
-    const response = await fetch(`/api/posts/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({
-            title,
-            content
-        }),
-        headers: {
-            'Content-Type': 'application/json'
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
         }
-    });
-
-    if (response.ok) {
-        document.location.replace('/dashboard/');
-    } else {
-        alert(response.statusText);
     }
+
 };
 
 document
-.querySelector('.edit-post-form')
-.addEventListener('submit', editFormHandler);
+    .querySelector('.edit-post-form')
+    .addEventListener('submit', editFormHandler);

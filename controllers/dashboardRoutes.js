@@ -1,5 +1,4 @@
 // TODO: Build the Dashboard route
-
 const router = require("express").Router();
 const { User, Post } = require("../models");
 const withAuth = require("../utils/auth");
@@ -47,13 +46,13 @@ router.get('/:id', withAuth, async (req, res) => {
     try {
 
         const postData = await Post.findByPk(req.params.id);
-
+       
         const post = postData.get({ plain: true });
 
         res.render('editpost', {
             post,
+            layout: "dashboard",
             logged_in: req.session.logged_in,
-            // layout: "dashboard",
 
         });
 
