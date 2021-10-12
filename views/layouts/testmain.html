@@ -1,141 +1,38 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-</head>
-
-<body>
-
-    <!-- Start Top Bar -->
-    <header>
-<div class="top-bar">
-    <div class="top-bar-left">
-        <ul class="menu">
-            {{#if loggedIn}}
-            <li class="menu-text">Tech-Blog</li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="#">Logout</a></li>
-            {{else}}
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Login</a></li>
-            {{/if}}
-        </ul>
-    </div>
-</div>
-<!-- End Top Bar -->
-    </header>
-    
-
-    <div class="callout large primary">
-        <div class="row column text-center">
-            <h1>Tech Blog</h1>
-            <h2 class="subheader">Such a Simple Blog Layout</h2>
-        </div>
-    </div>
-
-    <!-- We can now combine rows and columns when there's only one column in that row -->
-    <div class="row medium-8 large-7 columns">
-        <div class="blog-post">
-            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-            <img class="thumbnail" src="https://placehold.it/850x350">
-            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
-                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
-                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
-                Nulla at nulla justo, eget luctus.</p>
-            <div class="callout">
-                <ul class="menu simple">
-                    <li><a href="#">Author: Mike Mikers</a></li>
-                    <li><a href="#">Comments: 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="blog-post">
-            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-            <img class="thumbnail" src="https://placehold.it/850x350">
-            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
-                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
-                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
-                Nulla at nulla justo, eget luctus.</p>
-            <div class="callout">
-                <ul class="menu simple">
-                    <li><a href="#">Author: Mike Mikers</a></li>
-                    <li><a href="#">Comments: 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="blog-post">
-            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-            <img class="thumbnail" src="https://placehold.it/850x350">
-            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
-                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
-                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
-                Nulla at nulla justo, eget luctus.</p>
-            <div class="callout">
-                <ul class="menu simple">
-                    <li><a href="#">Author: Mike Mikers</a></li>
-                    <li><a href="#">Comments: 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="blog-post">
-            <h3>Awesome blog post title <small>3/6/2015</small></h3>
-            <img class="thumbnail" src="https://placehold.it/850x350">
-            <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
-                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.
-                Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.
-                Nulla at nulla justo, eget luctus.</p>
-            <div class="callout">
-                <ul class="menu simple">
-                    <li><a href="#">Author: Mike Mikers</a></li>
-                    <li><a href="#">Comments: 3</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
-</body>
-
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fund My Project!</title>
-    <link rel="stylesheet" href="/css/jass.css">
+    <title class="app-title">Tech-Blog</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="flex-column justify-space-around">
-        <header class="display-flex justify-space-between align-center p-2">
-            <h1>
-                <span role="img" aria-label="money">💸</span>
-                <a href="/">Fund My Project!</a>
-            </h1>
-            <nav>
+    <div class="flex-column justify-space-between">
+        <header class="hero">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
+                <h1>
+                    <a href="/">Home</a>
+                </h1>
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-                <a href="/profile">profile</a> |
+                <a href="/dashboard">Dashboard</a> |
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <a href="/login">login</a>
-                {{/if}}
+                <h2>
+                    <a href="/login">login</a>
+                    {{/if}}
+                </h2>
+
             </nav>
         </header>
         <main class="container container-fluid mt-5">
@@ -146,228 +43,10 @@
 
         </footer>
     </div>
-
-    <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>
 
+
 </html>
-{{!--
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    {{!--
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    --}}
-    {{!--
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --}}
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-</head>
-
-<body>
-    <!-- Start Top Bar -->
-    <header>
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="menu">
-                    {{#if loggedIn}}
-                    <li class="menu-text">Tech-Blog</li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/" id="logout">Logout</a></li>
-                    {{else}}
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/login">Dashboard</a></li>
-                    {{/if}}
-                </ul>
-            </div>
-        </div>
-        <!-- End Top Bar -->
-    </header>
-    <div class="callout large primary">
-        <div class="row column text-center">
-            <h1>Tech Blog</h1>
-            <h2 class="subheader">Such a Simple Blog Layout</h2>
-        </div>
-    </div>
-    <!-- We can now combine rows and columns when there's only one column in that row -->
-    <main class="flex-container align-center">
-        {{{ body }}}
-    </main>
-    {{#if logged_in}}
-    <script src="../../public/js/login.js"></script>
-    {{/if}}
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-    </script>
-</body>
-
-</html> --}}
-{{!-- Try to use foundations liberary in the future for better view --}}
-{{!-- <div class="row medium-8 large-7 columns">
-    <div class="blog-post">
-        <a href="/post/{{id}}">
-            <h3>{{post.title}} <small>{{format_date date_created}}</small></h3>
-            <p> {{post.content}} </p>
-            <div class="callout">
-                <ul class="menu simple">
-                    <li>Author: {{user.name}} </li>
-                    {{!-- <li>comments<a href="/post/{{id}}">{{comments.length}} {{format_plural "comment"
-                            comments.length}}</a>
-                        --}}
-                        {{!--
-                    <li><a href="/posts/{{id}}">{{comments.length}} {{ comments.length}}</a>
-                    </li>
-                </ul>
-            </div>
-        </a>
-
-    </div>
-    {{!-- <div class="container">
-        <div class="row">
-    
-            <div class="col-md-8 col-md-offset-2">
-    
-                <h1>Create post</h1>
-    
-                <form class="post-form" method="POST">
-    
-                    <div class="form-group has-error">
-                        <label for="slug">Slug <span class="require">*</span> <small>(This field use in url
-                                path.)</small></label>
-                        <input type="text" class="form-control" name="slug" />
-                        <span class="help-block">Field not entered!</span>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="title">Title <span class="require">*</span></label>
-                        <input id="title" type="text" class="form-control" name="title" />
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea id="content" rows="5" class="form-control" name="description"></textarea>
-                    </div>
-    
-                    <div class="form-group">
-                        <p><span class="require">*</span> - required fields</p>
-                    </div>
-    
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">
-                            Create
-                        </button>
-                        {{!-- <button class="btn btn-default">
-                            Cancel
-                        </button> --}}
-                    </div>
-    
-                </form>
-            </div>
-    
-        </div>
-    </div>
-
-{{!-- <div class="mb-5 pt-3">
-    <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create
-            post</button></a>
-
-    <h2 class="title pb-4">Dashboard: Showing all posts</h2>
-    <hr>
-    {{#if posts.length}}
-</div>
-
-{{#each posts as |post|}}
-{{> post-info post}}
-
-<a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
-</div>
-{{/each}}
-
-{{else}}
-<h6 class="pb-4 has-text-centered is-italic">There are no current posts</h6>
-
-{{/if}} --}}
-{{!-- <div class="container">
-    <div class="row">
-
-        <div class="col-md-8 col-md-offset-2">
-
-            <h1>Edit Post</h1>
-
-            <form class="post-form" method="POST">
-
-                <div class="form-group has-error">
-                    <label for="slug">Slug <span class="require">*</span> <small>(This field use in url
-                            path.)</small></label>
-                    <input type="text" class="form-control" name="slug" />
-                    <span class="help-block">Field not entered!</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="title">Title <span class="require">*</span></label>
-                    <input id="title" type="text" class="form-control" name="title" value="{{post.title}}" />
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="content" rows="5" class="form-control" name="description"
-                        value="{{post.content}}"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <p><span class="require">*</span> - required fields</p>
-                </div>
-
-                <div class="is-pulled-right">
-                    created by you on {{format_date post.date_created}}
-                    |
-                    <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
-                        post.comments.length}}</a>
-                </div>
-                <button type="submit" class="button is-success">save post</button>
-                <button type="button" class="button is-danger delete-post-btn">delete post</button>
-
-            </form>
-        </div>
-
-    </div>
-</div> --}}
-{{!-- <div>
-    Welcome
-</div>
-<div class="login-box">
-    <div class="row collapse expanded">
-        <div class="small-12 medium-6 column small-order-2 medium-order-1">
-            <div class="login-box-form-section">
-                <h1 class="login-box-title">Sign up</h1>
-                <input id="name-signup" class="login-box-input" type="text" name="username" placeholder="Username" />
-                <input id="email-signup" class="login-box-input" type="email" name="email" placeholder="E-mail" />
-                <input id="password-signup" class="login-box-input" type="password" name="password"
-                    placeholder="Password" />
-                <input class="login-box-submit-button" type="submit" name="signup_submit" value="Sign me up" />
-            </div>
-        </div>
-        <div class="small-12 medium-6 column small-order-1 medium-order-2 login-box-social-section">
-            <form>
-                <div class="sign-in-form">
-                    <h4 class="text-center">Sign In</h4>
-                    <label for="sign-in-form-username">Username</label>
-                    <input type="text" class="sign-in-form-username" id="sign-in-form-username">
-                    <label for="sign-in-form-password">Password</label>
-                    <input type="text" class="sign-in-form-password" id="sign-in-form-password">
-                    <button type="submit" class="sign-in-form-button">Sign In</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div> --}}
