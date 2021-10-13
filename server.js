@@ -1,3 +1,4 @@
+// TODO: Require application configurations and files to lunch the app
 const path = require('path');
 const express = require('express');
 const session = require('express-session');

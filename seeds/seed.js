@@ -1,3 +1,4 @@
+// TODO: Require models and sequelize to handle connction
 const sequelize = require('../config/connection');
 const { User, Post, Comment } = require('../models');
 // Requireing all the necessary dependencies

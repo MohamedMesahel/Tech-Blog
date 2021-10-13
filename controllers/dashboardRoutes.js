@@ -19,7 +19,7 @@ router.get('/', withAuth, async (req, res) => {
                     model: Comment,
                 }
             ],
-            
+
         });
 
         const posts = postData.map(post => post.get({ plain: true }));
@@ -51,7 +51,7 @@ router.get('/:id', withAuth, async (req, res) => {
     try {
 
         const postData = await Post.findByPk(req.params.id);
-       
+
         const post = postData.get({ plain: true });
 
         res.render('editpost', {

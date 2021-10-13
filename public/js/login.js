@@ -1,10 +1,11 @@
+// TODO: Build loginFormHandler function
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
   const username = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
- console.log(username, password);
+  console.log(username, password);
   if (username && password) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/users/login', {
@@ -21,7 +22,7 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
+// TODO: Build signupFormHandler function
 const signupFormHandler = async (event) => {
   event.preventDefault();
 

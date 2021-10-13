@@ -1,5 +1,4 @@
 // TODO: Build Post API
-
 const router = require("express").Router();
 const { Post, Comment, User } = require("../models");
 
@@ -41,8 +40,8 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-
 module.exports = router;
+
 // Create Posts without Async method for future references
 // router.post("/", withAuth, (req, res) => {
 //     const body = req.body;

@@ -1,8 +1,9 @@
+{{!-- Rendring one post with card info --}}
 <div class="postCard">
     <a href="/posts/{{ id }}" class="postLink">
         <div class="postTitle ">
-            <h2 >{{ title }}</h2>
-            <h4 >Author: {{ user.username }} on {{ format_date date_created }}</h3>
+            <h2>{{ title }}</h2>
+            <h4>Author: {{ user.username }} on {{ format_date date_created }}</h3>
         </div>
     </a>
     <p>{{ content }}</p>

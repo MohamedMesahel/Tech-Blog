@@ -1,4 +1,5 @@
-<!doctype html>
+<!-- Testing files for differnt liberies founation, bulma and bootstrap -->
+<!-- <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -11,35 +12,35 @@
 <body>
 
     <!-- Start Top Bar -->
-    <header>
-<div class="top-bar">
-    <div class="top-bar-left">
-        <ul class="menu">
-            {{#if loggedIn}}
-            <li class="menu-text">Tech-Blog</li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="#">Logout</a></li>
-            {{else}}
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Login</a></li>
-            {{/if}}
-        </ul>
-    </div>
-</div>
-<!-- End Top Bar -->
-    </header>
-    
+    <!-- <header>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    {{#if loggedIn}}
+                    <li class="menu-text">Tech-Blog</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="#">Logout</a></li>
+                    {{else}}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div> -->
+        <!-- End Top Bar -->
+    <!-- </header>
+
 
     <div class="callout large primary">
         <div class="row column text-center">
             <h1>Tech Blog</h1>
             <h2 class="subheader">Such a Simple Blog Layout</h2>
         </div>
-    </div>
+    </div> -->
 
     <!-- We can now combine rows and columns when there's only one column in that row -->
-    <div class="row medium-8 large-7 columns">
+    <!-- <div class="row medium-8 large-7 columns">
         <div class="blog-post">
             <h3>Awesome blog post title <small>3/6/2015</small></h3>
             <img class="thumbnail" src="https://placehold.it/850x350">
@@ -128,9 +129,9 @@
                 <span role="img" aria-label="money">💸</span>
                 <a href="/">Fund My Project!</a>
             </h1>
-            <nav>
+            <nav> -->
                 <!-- Conditionally render login or logout links -->
-                {{#if logged_in}}
+                <!-- {{#if logged_in}}
                 <a href="/profile">profile</a> |
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
@@ -138,17 +139,17 @@
                 {{/if}}
             </nav>
         </header>
-        <main class="container container-fluid mt-5">
+        <main class="container container-fluid mt-5"> -->
             <!-- Render the sub layout -->
             {{{ body }}}
-        </main>
+        <!-- </main>
         <footer>
 
         </footer>
-    </div>
+    </div> -->
 
     <!-- Render script for logged in users only -->
-    {{#if logged_in}}
+    <!-- {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>
@@ -171,9 +172,9 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
-<body>
+<body> -->
     <!-- Start Top Bar -->
-    <header>
+    <!-- <header>
         <div class="top-bar">
             <div class="top-bar-left">
                 <ul class="menu">
@@ -189,17 +190,17 @@
                     {{/if}}
                 </ul>
             </div>
-        </div>
+        </div> -->
         <!-- End Top Bar -->
-    </header>
+    <!-- </header>
     <div class="callout large primary">
         <div class="row column text-center">
             <h1>Tech Blog</h1>
             <h2 class="subheader">Such a Simple Blog Layout</h2>
         </div>
-    </div>
+    </div> -->
     <!-- We can now combine rows and columns when there's only one column in that row -->
-    <main class="flex-container align-center">
+    <!-- <main class="flex-container align-center">
         {{{ body }}}
     </main>
     {{#if logged_in}}
@@ -234,34 +235,34 @@
     </div>
     {{!-- <div class="container">
         <div class="row">
-    
+
             <div class="col-md-8 col-md-offset-2">
-    
+
                 <h1>Create post</h1>
-    
+
                 <form class="post-form" method="POST">
-    
+
                     <div class="form-group has-error">
                         <label for="slug">Slug <span class="require">*</span> <small>(This field use in url
                                 path.)</small></label>
                         <input type="text" class="form-control" name="slug" />
                         <span class="help-block">Field not entered!</span>
                     </div>
-    
+
                     <div class="form-group">
                         <label for="title">Title <span class="require">*</span></label>
                         <input id="title" type="text" class="form-control" name="title" />
                     </div>
-    
+
                     <div class="form-group">
                         <label for="description">Description</label>
                         <textarea id="content" rows="5" class="form-control" name="description"></textarea>
                     </div>
-    
+
                     <div class="form-group">
                         <p><span class="require">*</span> - required fields</p>
                     </div>
-    
+
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
                             Create
@@ -270,26 +271,26 @@
                             Cancel
                         </button> --}}
                     </div>
-    
+
                 </form>
             </div>
-    
+
         </div>
     </div>
 
-{{!-- <div class="mb-5 pt-3">
-    <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create
-            post</button></a>
+    {{!-- <div class="mb-5 pt-3">
+        <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create
+                post</button></a>
 
-    <h2 class="title pb-4">Dashboard: Showing all posts</h2>
-    <hr>
-    {{#if posts.length}}
-</div>
+        <h2 class="title pb-4">Dashboard: Showing all posts</h2>
+        <hr>
+        {{#if posts.length}}
+    </div>
 
-{{#each posts as |post|}}
-{{> post-info post}}
+    {{#each posts as |post|}}
+    {{> post-info post}}
 
-<a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
+    <a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
 </div>
 {{/each}}
 
@@ -370,4 +371,4 @@
             </form>
         </div>
     </div>
-</div> --}}
+</div> --}} --> -->

@@ -1,8 +1,8 @@
+// TODO: Require Sequuelize dataTypes.
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // TODO: Build Post Model based on projects js from the miniproject
-
-class Post extends Model {}
+class Post extends Model { }
 
 Post.init(
   {

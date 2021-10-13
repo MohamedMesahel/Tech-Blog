@@ -1,3 +1,4 @@
+// TODO: Build deleteFormHandler function
 const deleteFormHandler = async (event) => {
     event.preventDefault();
 
@@ -17,5 +18,5 @@ const deleteFormHandler = async (event) => {
 }
 
 document
-.querySelector('.delete-post-btn')
-.addEventListener('click', deleteFormHandler);
+    .querySelector('.delete-post-btn')
+    .addEventListener('click', deleteFormHandler);

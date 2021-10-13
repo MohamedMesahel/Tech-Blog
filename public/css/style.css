@@ -30,7 +30,6 @@ nav {
   display: flex;
 }
 
-
 header {
   background-color: var(--darkColor);
 }
@@ -146,10 +145,7 @@ label {
   font-size: 1.1rem;
 }
 
-input, .loginBtn, 
-.commentBtn, 
-.createPostBtn, 
-.deletePostBtn {
+input, .loginBtn, .commentBtn, .createPostBtn, .deletePostBtn {
   width: 100%;
   height: 40px;
   border: none;

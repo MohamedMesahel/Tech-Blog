@@ -1,8 +1,8 @@
+// TODO: require Sequelize and set up the einvironmet for JAWS DB
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
-
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {

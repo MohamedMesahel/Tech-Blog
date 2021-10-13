@@ -1,8 +1,8 @@
+// TODO: Require models and data that connectes the comments with posts
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // TODO: Build Comments Model based on projects js from the miniproject
-
 class Comment extends Model { }
 
 Comment.init(
@@ -38,8 +38,7 @@ Comment.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-        
-        
+
     },
     {
         sequelize,

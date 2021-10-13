@@ -1,3 +1,4 @@
+// TODO: Require Sequuelize, dataTypes and bcrypt to validate the user credentials.
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');

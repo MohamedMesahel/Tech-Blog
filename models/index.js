@@ -1,3 +1,5 @@
+// TODO: Require models and data.
+
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
