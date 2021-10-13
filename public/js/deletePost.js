@@ -1,4 +1,4 @@
-const deleteFormHandler = (event) => {
+const deleteFormHandler = async (event) => {
     event.preventDefault();
 
     const id = document.querySelector('#postID').value.trim();

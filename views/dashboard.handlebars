@@ -3,6 +3,6 @@
   <h1>Welcome to your Dashboard</h1>
 </section>
 {{#each posts as |post| }}
-{{> postdashboardview }}
+{{> postdashboardview post }}
 {{/each}}
 <a id="createBtn" href="/dashboard/createpost">Create new post</a>
