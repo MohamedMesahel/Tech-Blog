@@ -7,6 +7,8 @@
 [![Website shields.io](https://badges.aleen42.com/src/node.svg)](http://shields.io/)
 [![Website shields.io](https://badges.aleen42.com/src/npm.svg)](http://shields.io/)
 [![Website shields.io](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](http://shields.io/)
+[![Website shields.io](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](http://shields.io/)
+[![Website shields.io](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](http://shields.io/)
 
 # Tech-Blog
 CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
